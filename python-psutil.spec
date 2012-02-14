@@ -3,8 +3,8 @@
 # Filter Python modules from Provides
 
 Name:		python-psutil
-Version:	0.4.0
-Release:	%mkrel 1
+Version:	0.4.1
+Release:	1
 Summary:	A process utilities module for Python
 
 Group:		Development/Python
@@ -42,7 +42,7 @@ export CFLAGS=$RPM_OPT_FLAGS
 %install
 %{__python} setup.py install \
   --skip-build \
-  --root $RPM_BUILD_ROOT
+  --root %buildroot
 
  
 %files
