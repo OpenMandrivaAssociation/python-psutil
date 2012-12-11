@@ -51,3 +51,14 @@ export CFLAGS=$RPM_OPT_FLAGS
 %{python_sitearch}/%{short_name}/
 %{python_sitearch}/*.egg-info
 %{python_sitearch}/*.so
+
+
+%changelog
+* Tue Feb 14 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.4.1-1
++ Revision: 773926
+- version update 0.4.1
+
+* Mon Oct 31 2011 Alexander Khrukin <akhrukin@mandriva.org> 0.4.0-1
++ Revision: 708101
+- imported package python-psutil
+
