@@ -1,13 +1,13 @@
 %define srcname psutil
 
 Name:           python-%{srcname}
-Version:        2.1.3
-Release:        3
+Version:        4.3.0
+Release:        1
 Summary:        Interface for retrieving information on all running processes
 Group:          Development/Python
 License:        MIT
 URL:            http://code.google.com/p/psutil/
-Source0:        https://pypi.python.org/packages/source/p/psutil/%{srcname}-%{version}.tar.gz
+Source0:	https://github.com/giampaolo/psutil/archive/release-%{version}.tar.gz
 BuildRequires:  python2-devel
 BuildRequires:  python2-distribute
 BuildRequires:	python3-devel
@@ -23,7 +23,6 @@ functionalities offered by command line tools.
 %files
 %{py3_platsitedir}/%{srcname}/
 %{py3_platsitedir}/*.egg-info/
-%{py3_platsitedir}/*.so
 
 %package -n python2-%{srcname}
 Summary:	%{summary}
@@ -38,12 +37,11 @@ functionalities offered by command line tools.
 %files -n python2-%{srcname}
 %{py2_platsitedir}/%{srcname}/
 %{py2_platsitedir}/*.egg-info/
-%{py2_platsitedir}/*.so
 
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %{srcname}-%{version}
+%setup -q -n %{srcname}-release-%{version}
 # Remove shebangs
 for file in psutil/*.py; do
   sed -i.orig -e 1d $file && \
