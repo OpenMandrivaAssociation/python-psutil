@@ -1,13 +1,13 @@
 %define srcname psutil
 
 Name:           python-%{srcname}
-Version:        4.3.0
-Release:        2
+Version:        5.4.5
+Release:        1
 Summary:        Interface for retrieving information on all running processes
 Group:          Development/Python
 License:        MIT
 URL:            http://code.google.com/p/psutil/
-Source0:	https://github.com/giampaolo/psutil/archive/release-%{version}.tar.gz
+Source0:	https://github.com/giampaolo/psutil/archive/release-5.4.5/psutil-%{version}.tar.gz
 BuildRequires:  python2-devel
 BuildRequires:  python2-distribute
 BuildRequires:	python3-devel
@@ -53,15 +53,15 @@ rm -rf %{py3dir}
 cp -a . %{py3dir}
 
 %build
-CFLAGS="%{optflags}" %{__python2} setup.py build
+CFLAGS="%{optflags}" python2} setup.py build
 
 pushd %{py3dir}
-	CFLAGS="%{optflags} `python3-config --libs`" %{__python3} setup.py build
+	CFLAGS="%{optflags} `python3-config --libs`" python3} setup.py build
 popd
 
 %install
-%{__python2} setup.py install --skip-build --root %{buildroot}
+python setup.py install --skip-build --root %{buildroot}
 
 pushd %{py3dir}
-	%{__python3} setup.py install --skip-build --root=%{buildroot}
+	python3} setup.py install --skip-build --root=%{buildroot}
 popd
