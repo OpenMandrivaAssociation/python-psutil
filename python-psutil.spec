@@ -1,7 +1,7 @@
 %define srcname psutil
 
 Name:           python-%{srcname}
-Version:        4.3.0
+Version:	5.6.3
 Release:        2
 Summary:        Interface for retrieving information on all running processes
 Group:          Development/Python
