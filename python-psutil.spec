@@ -9,7 +9,7 @@ License:        MIT
 URL:            http://code.google.com/p/psutil/
 Source0:	https://github.com/giampaolo/psutil/archive/release-%{version}.tar.gz
 BuildRequires:  python2-devel
-BuildRequires:  python2-distribute
+BuildRequires:  python2dist(setuptools)
 BuildRequires:	python3-devel
 BuildRequires:  python3-distribute
 %rename python3-psutil
