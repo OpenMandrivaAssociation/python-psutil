@@ -1,7 +1,7 @@
 %define srcname psutil
 
 Name:           python-%{srcname}
-Version:	5.7.0
+Version:	5.7.2
 Release:	1
 Summary:        Interface for retrieving information on all running processes
 Group:          Development/Python
@@ -9,7 +9,7 @@ License:        MIT
 URL:            http://code.google.com/p/psutil/
 Source0:	https://github.com/giampaolo/psutil/archive/release-%{version}.tar.gz
 BuildRequires:  python2-devel
-BuildRequires:  python2-distribute
+BuildRequires:  python2dist(setuptools)
 BuildRequires:	python3-devel
 BuildRequires:  python3-distribute
 %rename python3-psutil
