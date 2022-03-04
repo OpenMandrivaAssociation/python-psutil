@@ -12,6 +12,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python2dist(setuptools)
 BuildRequires:	python3-devel
 BuildRequires:  python3-distribute
+BuildRequires:	gettext-devel
 %rename python3-psutil
 
 %description
