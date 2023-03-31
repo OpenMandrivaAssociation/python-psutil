@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:	5.9.4
-Release:	1
+Release:	2
 Summary:        Interface for retrieving information on all running processes
 Group:          Development/Python
 License:        MIT
