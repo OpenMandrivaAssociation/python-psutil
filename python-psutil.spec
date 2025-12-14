@@ -9,7 +9,9 @@ License:        MIT
 URL:            https://code.google.com/p/psutil/
 Source0:	https://github.com/giampaolo/psutil/archive/release-%{version}.tar.gz
 BuildSystem:	python
-BuildRequires:	python3-devel
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(python)
+BuildRequires:  python%{pyver}dist(setuptools)
 BuildRequires:	gettext-devel
 %rename python3-psutil
 
