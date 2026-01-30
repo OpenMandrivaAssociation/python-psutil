@@ -1,7 +1,7 @@
 %define module psutil
 
 Name:		python-psutil
-Version:	7.2.1
+Version:	7.2.2
 Release:	1
 Summary:	Interface for retrieving information on all running processes
 Group:		Development/Python
